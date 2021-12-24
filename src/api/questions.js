@@ -1,4 +1,4 @@
-const dataQuestions = [
+const Questions = [
     {
       question: "What can you do on the Hive Blockchain?",
       options: [
@@ -329,4 +329,4 @@ const dataQuestions = [
     }   
   ];
   
-  export default dataQuestions;
+  export default Questions;
