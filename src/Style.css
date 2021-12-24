@@ -1,0 +1,91 @@
+.quiztitle{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.QuestionBox{
+    border: 2px solid #1E90FF;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13);
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.options{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+    margin-top: 15px;
+    padding: 7px;
+    padding-left: 25px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.buttonGroup{
+    text-align: center;
+}
+.navigateButton{
+    width: 70px;
+    height: 38px;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13);
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.allquestionTitle{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.optionCircle{
+    text-align: center !important;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13) !important;
+    border: 2px solid #fff !important;
+    border-radius: 20px !important;
+    width: 40px !important;
+    padding-top: 5px !important;
+    margin-top: 17px !important;
+    height: 40px !important; 
+    margin-left: 16px !important;
+    margin-right: 10.5px !important;
+    display: flex !important;
+    justify-content: space-around;
+}
+.optionCircle:hover{
+    cursor: pointer;
+}
+.numberBox{
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13);
+    border: 2px solid #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding: 15px;
+    position: fixed;
+    border-radius: 10px;
+}
+.load{
+    text-align: center;
+    margin-top: 230px;
+}
+.timer{
+    text-align: right;
+    margin-right: 70px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    margin-top: 5   px;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
