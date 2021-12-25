@@ -1,3 +1,4 @@
+# Live link: - https://ntatestapp.netlify.app/
 # NTA Quiz App
 This is a quiz web app which allow users to give quiz in a defined time period and get the marks and stars accordingly to the performance.
 
