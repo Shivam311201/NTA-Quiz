@@ -39,7 +39,7 @@ function ScorePage() {
           <Star/>
           <div className="ScoreInfo">
             Your Score is {score} out of {Questions.length} questions.
-            <div className="anotherQuiz"><a href="/Quiz">Give quiz again</a></div>
+            <div className="anotherQuiz" onClick={()=>window.location.reload()}><Link to="/Quiz">Give quiz again</Link></div>
           </div>
         </div>
       </div>
