@@ -9,25 +9,29 @@ import Star from "./Star";
 
 function ScorePage() {
 
-  const [winHeight, setHeight] = useState(window.innerHeight);
-  const [score,setScore]=useContext(ScoreContext);
-
-  useEffect(() => {
-    function handleResize() {
-      setHeight(window.innerHeight);
-    }
-    window.addEventListener("resize", handleResize);
-  });
+    const [score,setScore]=useContext(ScoreContext);
+    const [winHeight, setHeight] = useState(window.innerHeight);
+    const [winWidth, setWidth] = useState(window.innerWidth);
+    
+    useEffect(() => {
+      function handleResize() {
+        setHeight(window.innerHeight);
+        setWidth(window.innerWidth);
+      }
+      window.addEventListener("resize", handleResize);
+    });
   
   return (
     <div style={{ height: winHeight }}>
-      <div className="outercircle1">
-        <div className="circle1"></div>
+      <div className="outercircle3">
+        <div className="circle3"></div>
       </div>
-      <div className="StartingTitle">
+      <div style={{display:"flex",justifyContent:"space-around"}}>
+      <div className={"StartingTitle "+(winWidth<=750?"startingtitleBox":"")}>
         <FontAwesomeIcon className="star" icon={faStar} />
-        Results
+        Result
         <FontAwesomeIcon className="star" icon={faStar} />
+      </div>
       </div>
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div className="StartingBox">
@@ -39,9 +43,9 @@ function ScorePage() {
           </div>
         </div>
       </div>
-      <div className="outercircle2">
+      {winWidth>750&&<div className="outercircle2">
         <div className="circle2"></div>
-      </div>
+      </div>}
     </div>
   );
 }

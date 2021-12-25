@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import Questions from "../api/questions";
 import { Row, Col } from "react-bootstrap";
 import { OptionContext } from "../ContextFile/OptionContext";
@@ -8,10 +8,21 @@ import { VisitedQuestionContext } from "../ContextFile/VisitedQuestionContext";
 import "./Style.css";
 
 function QuestionPanel() {
+
   const [question, setQuestion] = useContext(QuestionContext);
   const [Options, setOptions] = useContext(OptionContext);
   const [selectedOption, setSelectedOption] = useContext(SelectedOptionContext);
   const [VisitedQuestion,setVisitedQuestion]=useContext(VisitedQuestionContext);
+  const [winHeight, setHeight] = useState(window.innerHeight);
+  const [winWidth, setWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    function handleResize() {
+      setHeight(window.innerHeight);
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+  });
 
   function currentQuestion(key) {
     if (key !== question) {
@@ -29,7 +40,7 @@ function QuestionPanel() {
         <div>
           Question {question + 1}/{Questions.length}
         </div>
-        <div><a href="https://nta.ac.in/ContactUs">Need Help?</a></div>
+        {winWidth>750&&<div><a href="https://nta.ac.in/ContactUs">Need Help?</a></div>}
       </div>
       <Row className="m-0 p-0">
         {Questions?.map((item, key) => (
@@ -42,6 +53,7 @@ function QuestionPanel() {
             {key + 1}
           </Col>
         ))}
+        {winWidth<=750&&<div className="LinkNTA"><a href="https://nta.ac.in/ContactUs">Need Help?</a></div>}
       </Row>
     </div>
   );

@@ -4,10 +4,14 @@ import Questions from "../api/questions";
 import "./Style.css";
 
 function StartingPage() {
+
   const [winHeight, setHeight] = useState(window.innerHeight);
+  const [winWidth, setWidth] = useState(window.innerWidth);
+  
   useEffect(() => {
     function handleResize() {
       setHeight(window.innerHeight);
+      setWidth(window.innerWidth);
     }
     window.addEventListener("resize", handleResize);
   });
@@ -17,9 +21,11 @@ function StartingPage() {
       <div className="outercircle1">
         <div className="circle1"></div>
       </div>
-      <div className="StartingTitle">Welcome to NTA Testing App</div>
+      <div style={{display:"flex",justifyContent:"space-around"}}>
+      <div className={"StartingTitle "+(winWidth<=750?"startingtitleBox":"")}>Welcome to NTA Testing App</div>
+      </div>
       <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <div className="StartingBox">
+        <div className={(winWidth>450?"StartingBox1":"StartingBox2")}>
           <div className="instructions">Instructions</div>
           <ul className="instructionsInfo">
             <li>The Quiz contains {Questions.length} questions.</li>
@@ -32,9 +38,9 @@ function StartingPage() {
           </div>
         </div>
       </div>
-      <div className="outercircle2">
+      {winWidth>750&&<div className="outercircle2">
         <div className="circle2"></div>
-      </div>
+      </div>}
     </div>
   );
 }
