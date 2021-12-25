@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Col, Row } from "react-bootstrap";
 import Questions from "../api/questions";
+import QuestionStatusInfo from "./QuestionStatusInfo";
 import { QuestionContext } from "../ContextFile/QuestionContext";
 import Navigation from "./Navigation";
 import Option from "./option";
@@ -8,12 +9,12 @@ import QuestionPanel from "./QuestionPanel";
 import Timer from "./Timer";
 import "./Style.css";
 
-function Home() {
+function QuestionHome() {
   const [question, setQuestion] = useContext(QuestionContext);
 
   return (
     <div>
-      <div className="quiztitle">Accounts</div>
+      <div className="quiztitle">Cryptocurrency</div>
       <Row className="m-0 p-0">
         <Col className="m-0 p-0" lg={7} md={7} sm={7}>
           <div className="QuestionBox">
@@ -30,9 +31,10 @@ function Home() {
         <Col className="m-0 p-0" lg={5} md={5} sm={5}>
           <Timer />
           <QuestionPanel />
+          <QuestionStatusInfo/>
         </Col>
       </Row>
     </div>
   );
 }
-export default Home;
+export default QuestionHome;

@@ -74,7 +74,6 @@
     margin-right: 75px;
     padding: 15px;
     height: 370px;
-    position: fixed;
     overflow: auto;
     border-radius: 10px;
 }
@@ -83,20 +82,160 @@
     margin-right: 100px;
     font-family: 'Roboto Slab', serif;
     font-size: 18px;
-    margin-top: 5px;
+    margin-top: -40px;
     margin-bottom: 12px;
     font-weight: 400;
 }
+.StartingTitle{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 48px;
+    padding-top: 40px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #0B0D17;
+}
 .QuestionSolved{
-    background-color: #1E90FF;
+    background-color: yellowgreen !important;
     border: none !important;
     color: #fff;
 }
-.QuestionUnSolved{
+.QuestionVisited{
     background-color: #FF3048;
     border: none !important;
     color: #fff;
 }
-.curQuestion{
-    background-color: yellowgreen;
+.QuestionInfo{
+    display: flex;
+    margin-bottom: 15px;
 }
+.colourBox{
+    height: 10px;
+    width: 12px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13);
+}
+.InfoOuter{
+    margin-left: 150px;
+    margin-top: 25px;
+}
+.InfoType{
+    margin-top: -8px;
+    margin-left: 12px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+}
+.StartingBox{
+    width: 400px;
+    margin-top: 40px;   
+    border: 4px solid white;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13);
+    border-radius: 8px;
+    padding: 10px;
+}
+.instructions{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    color: #0B0D17 ;
+}
+.instructionsInfo{
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #0B0D17 ;
+}
+.StartButton{
+    width: 100px;
+    height: 42px;
+    border: 2px solid #0B0D17;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.13);
+    background-color:#0B0D17;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 3px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.StartButton:hover{
+    background-color: white;
+    color: #0B0D17;
+    transition-duration: 0.4s;   
+}
+.circle1{
+    border: #0B0D17 solid 58px; 
+    border-radius: 1000px;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    z-index: 0;
+    margin-left: 70px;
+    margin-top: 70px;
+  }
+  .outercircle1{
+    border:#0B0D17 solid 5px; 
+    border-radius: 1000px;
+    position: fixed;
+    height: 450px;
+    width: 450px;
+    margin-left: 1020px;
+    margin-top: -145px;
+    z-index: 0;
+  }
+  .circle2{
+    border: #0B0D17 solid 58px; 
+    border-radius: 1000px;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    z-index: 0;
+    margin-left: 70px;
+    margin-top: 68px;
+  }
+  .outercircle2{
+    border: #0B0D17  solid 5px; 
+    border-radius: 1000px;
+    position: fixed;
+    height: 450px;
+    width: 450px;
+    margin-top: -120px;
+    margin-left: -145px;
+    z-index: 0;
+  }
+  .star{
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  .ScoreInfo{
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #0B0D17 ;  
+  }
+  .anotherQuiz{
+      margin-top: 50px;
+      text-align: right;
+      text-decoration: none;
+  }
+  .mystar{
+      color: #fff;
+      border: solid black ;
+  }
+  .starGroup{
+      text-align: center;   
+      font-size: 30px;
+      margin-top: -5px;
+      margin-bottom: 15px;
+  }
+  .singleStar{
+      margin-left: 5px;
+  }
