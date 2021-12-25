@@ -25,7 +25,7 @@ function QuestionHome() {
   });
 
   return (
-    <div>
+    <div style={{width:(winWidth-12)}}>
       {winWidth>=576&&<div className="quiztitle">Cryptocurrency</div>}
       {winWidth<576&&<FontAwesomeIcon icon={faBars} className="NavIcon" size="2x" onClick={()=>setNav(!Nav)}/>}
       <Row className={"m-0 p-0 "+(winWidth<576)?"basicStyle":""}>
