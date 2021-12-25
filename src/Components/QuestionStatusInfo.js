@@ -10,7 +10,7 @@ function QuestionStatusInfo() {
       </div>
       <div className="QuestionInfo">
         <div className="colourBox" style={{backgroundColor:"#FF3048"}}></div>
-        <div className="InfoType">Question not answered</div>
+        <div className="InfoType">Question visited but not answered</div>
       </div>
       <div className="QuestionInfo">
         <div className="colourBox" style={{backgroundColor:"yellowgreen"}}></div>
